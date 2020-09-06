@@ -1,29 +1,31 @@
 #include<stdio.h>
 int main() {
-	int s = 9, count, count2, line = 0, isDown = 0;
-	for (isDown = 0; isDown <= 1; isDown++)
-	{
-		do
-		{
-			for (s = 15; s - line > 0; s--)
-			{
-				printf(" ");
-			}
-			for (count = 0; count < (line + 1); count++)
-			{
-				printf("%d", count);
-			}
-			for (count2 = line - 1; count2 >= 0; count2--)
-			{
-				printf("%d", count2);
-			}
-			printf("\n");
-			if (isDown)
-				line--;
-			else
-				line++;
-		} while ((line != 10 && line != -1) == 1);
-		line = line - 2;
+	int x;
+	printf("Enter Number : ");
+	scanf_s("%d", &x);
+	for (int i = 1; i <= x; i++) {
+		for (int b = x - 3; b <= x; b++) {
+			printf(" ");
+		}
+		for (int b = x - (x - 4); b <= x; b++) {
+			printf("*");
+		}
+		for (int b = x - (x - 5); b <= x; b++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+	for (int i = 1; i <= x; i++) {
+		for (int j = 1; j <= i; j++) {
+			printf(" ");
+		}
+		for (int j = x; j >= i; j--) {
+			printf("*");
+		}
+		for (int j = x - 1; j >= i; j--) {
+			printf("*");
+		}
+		printf("\n");
 	}
 	return 0;
 }
